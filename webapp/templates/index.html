@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <!-- <form action="/predict" method="POST">
+            Class: {{result}} <br>
+            <input type="submit" value="Run">
+        </form> -->
+
+        <form action="/visualize" method="POST">
+            <label for="Data">View latest data:</label>
+            <input type="submit" value="High Quality Precipitation" name="High Quality Precipitation">
+            <input type="submit" value="Precipitation Calibrated" name="Precipitation Calibrated">
+        </form>
+        Current data: {{ data }}
+        <img src='{{ source }}'>
+        <!-- <img class="plot" src="data:image/png;base64, {{ plot_url }}"> -->
+
+        <form action="/predict" method="POST">
+            <label for="models">Choose a model:</label>
+            <select name="models" id="models">
+                <outgroup label="High Quality (HQ) Precipitation Models">
+                    <option value="Naive Bayes Model (HQ)">Naive Bayes Model (HQ)</option>
+                    <option value="Logistic Regression Model (HQ)">Logistic Regression Model (HQ)</option>
+                    <option value="Decision Tree Model (HQ)">Decision Tree Model (HQ)</option>
+                    <option value="Support Vector Machine Model (HQ)">Support Vector Machine Model (HQ)</option>
+                </outgroup> <br>
+
+                <outgroup label="Precipitation Calibrated (PrecipCal) Precipitation Models">
+                    <option value="Naive Bayes Model (PrecipCal)">Naive Bayes Model (PrecipCal)</option>
+                    <option value="Logistic Regression Model (PrecipCal)">Logistic Regression Model (PrecipCal)</option>
+                    <option value="Decision Tree Model (PrecipCal)">Decision Tree Model (PrecipCal)</option>
+                    <option value="Support Vector Machine Model (PrecipCal)">Support Vector Machine Model (PrecipCal)</option>
+                </outgroup> <br>
+            </select>
+            <input type="submit" value="Run Model">
+        </form>
+        Result: {{result}}
+    </body>
+</html>

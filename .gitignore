@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Downloaded rainfall (large, regenerate with scripts/imerg_download.py)
+data/*.csv
+data/dec21/
+data/jun21/
+*.nc4
+!data/samples/*.nc4
+
+# Credentials
+.netrc
+_netrc

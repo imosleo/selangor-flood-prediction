@@ -1,0 +1,13 @@
+flask
+pandas
+numpy
+xarray
+netCDF4
+requests
+scikit-learn
+imbalanced-learn
+matplotlib
+seaborn
+openpyxl
+xlrd
+jupyter
